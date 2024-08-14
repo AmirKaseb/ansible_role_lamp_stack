@@ -1,31 +1,47 @@
-Role Name
-=========
+  Lamp\_Stack\_Initiliaze
 
-A brief description of the role goes here.
+Lamp\_Stack\_Initiliaze
+=======================
+
+A role to initialize and configure a LAMP stack (Linux, Apache, MySQL, PHP) on Ubuntu servers.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+*   Ubuntu 18.04 (Bionic) or 20.04 (Focal)
+*   Ansible 2.9 or higher
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+The following variables can be set to customize the role:
+
+*   `apache_port`: Port for the Apache server (default: 80)
+*   `mysql_root_password`: Root password for MySQL (default: 'rootpassword')
+*   `php_version`: PHP version to install (default: '7.4')
+
+Example of default variables in `defaults/main.yml`:
+
+    apache_port: 80
+    mysql_root_password: 'rootpassword'
+    php_version: '7.4'
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+No external role dependencies.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
+      become: yes
       roles:
-         - { role: username.rolename, x: 42 }
+        - role: AmirKaseb.Lamp_Stack_Initiliaze
+          vars:
+            apache_port: 8080
+            mysql_root_password: 'securepassword'
+            php_version: '8.0'
 
 License
 -------
@@ -35,5 +51,4 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
-# ansible_role_lamp_stack
+This role was created in 2024 by Amir Kaseb. For more information, visit [your website](https://example.com) or contact via [email@example.com](mailto:email@example.com).
