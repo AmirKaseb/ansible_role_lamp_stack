@@ -1,4 +1,3 @@
-  Lamp\_Stack\_Initiliaze
 
 Lamp\_Stack\_Initiliaze
 =======================
