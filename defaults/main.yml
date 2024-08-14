@@ -1,0 +1,4 @@
+---
+# defaults file for lamp_stack
+apache_port: 80
+mysql_root_password: "283amir2004"

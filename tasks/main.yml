@@ -1,0 +1,33 @@
+---
+# tasks file for lamp_stack
+
+- name: Intstall the Apache WebServer
+  apt: 
+    name: apache2
+    state: present #will result to ok if package is already installed ,or changed if package is installed
+  notify: Restart Apache
+
+- name: Install MySQL
+  apt:
+    name: mysql-server
+    state: present
+  notify: Restart MySQL
+
+- name: Install PHP
+  apt:
+    name:
+      - php
+      - php-mysql
+    state: present
+
+- name: Check if  Apache is enabled and started
+  systemd:
+    name: apache2
+    enabled: yes
+    state: started
+
+- name: Check if MySQL is enabled and started
+  systemd:
+    name: mysql
+    enabled: yes
+    state: started

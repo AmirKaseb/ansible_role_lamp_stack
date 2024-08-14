@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: Amir Kaseb
+  description: A role to initialize and configure a LAMP stack.
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+
+dependencies: []

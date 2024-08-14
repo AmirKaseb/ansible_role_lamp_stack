@@ -1,0 +1,11 @@
+---
+# Handlers for lamp_stack role
+- name: Restart Apache
+  systemd:
+    name: apache2
+    state: restarted
+
+- name: Restart MySQL
+  systemd:
+    name: mysql
+    state: restarted
