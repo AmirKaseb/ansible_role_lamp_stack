@@ -7,7 +7,7 @@ A role to initialize and configure a LAMP stack (Linux, Apache, MySQL, PHP) on U
 Requirements
 ------------
 
-*   Ubuntu 18.04 (Bionic) or 20.04 (Focal)
+*   Ubuntu 18.04 (Bionic) or 22.04 LTS
 *   Ansible 2.9 or higher
 
 Role Variables
