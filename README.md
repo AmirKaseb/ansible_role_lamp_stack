@@ -28,7 +28,7 @@ Example of default variables in `defaults/main.yml`:
 Dependencies
 ------------
 
-No external role dependencies.
+No external role dependencies...
 
 Example Playbook
 ----------------
